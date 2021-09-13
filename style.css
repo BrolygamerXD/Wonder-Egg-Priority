@@ -1,0 +1,300 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+hr{
+    width: 75%;
+    color: black;
+    border: 10px;
+}
+body{
+    background-image: url(Images/visual.jpg);
+    background-repeat:unset;
+    background-size:cover;
+    background-position:fixed;
+    
+    min-height: 100%;
+    background-attachment: scroll;
+    color:black;
+    font-family:'Times New Roman', Times, serif;
+    cursor:url(Images/p1qktz9669q61.png), auto;
+}
+/*cursor sigue sin funcionar toca ver uno que este verificado*/
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display:grid;
+    grid-gap:13px;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(5,auto);
+
+    grid-template-areas:"boton boton boton" 
+                        "header header header" 
+                        " sidebar contenido contenido"
+                        " sidebar widget-1 widget-2"
+                        "footer footer footer";
+}
+.contenedor > div
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background: rgb(168, 114, 114);
+    padding: 20px;
+    border-radius: 4px;
+}
+.contenedor .header{
+    background-color: #FFE000;
+    color: white;
+    
+
+    grid-area: header
+}
+.contenedor .contenido{
+    grid-area: contenido;
+    background-color: rgb(231, 195, 75);
+}
+.contenedor .sidebar{
+    background-image:url(Images/scrover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    
+
+    
+    grid-area: sidebar;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    background-color: rgba(00,00,255,05);
+}
+.contenedor.sidebar::before{
+    opacity: 0.5;
+}
+.contenedor .widget-1,
+.contenedor .widget-2
+{
+    background:rgb(106, 106, 216);
+    color: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+.contenedor .widget-1{
+    grid-area: widget-1;
+    background-image: url(Images/fhjf.jpg);
+}
+.contenedor .widget-2{
+    grid-area: widget-2;
+    background-image: url(Images/hhjhg.jpg);
+}
+.contenedor .footer{
+    background-image:url(gifts/64b8823a15830086485ca64f2dee38561a183978r1-500-281_hq.gif);
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+
+    background-color:#FFE000;
+    color: black;
+    grid-area: footer;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+    
+}
+.Menu
+    {
+        box-sizing:content-box;
+        font-size: 100;
+        color:brown;
+        
+    }
+    .Menu_item
+    {
+        width: 130%;
+        display:inline-block;
+        padding: 30px 30px;
+        background-color: white; 
+        border: 10px solid  rgb(231, 195, 75);
+        text-align:center;
+        color:#fff;
+        font-family:impact;
+        opacity: 0.7;
+        
+        
+    }
+    .Menu_item:hover
+    {
+        background-color:yellow;
+        color:black !important;
+        border: 5px solid red;
+        font-size: 50px;
+    }
+    .Menu_item--active
+    {
+        font-size: 100px;
+        color: red;
+    }
+    @font-face{
+        font-family:Carlotte;
+        src: url(fuentes_de_texto/StrongConcrete-Bold.otf);
+    }
+    input{
+        font-family:Carlotte;
+        border: none;
+        font-size: 32px;
+        padding:20px;
+        margin: 20px;
+        position:absolute;
+        right: 100px;
+        color: white;
+        border-radius: 10px;
+        box-shadow:5px 5px 10px blue;
+        background-color: cornflowerblue;
+
+    }
+    input:hover{
+        color: black;
+        background-color:#FFE000;
+    }
+
+    @font-face{
+        font-family:RabbitsAndFoxes;
+        src: url(fuentes_de_texto/RabbitsAndFoxes.ttf);
+    }
+    h2{
+        font-family:RabbitsAndFoxes;
+        font-size: 30px;
+        padding:20px;
+        margin:20px;
+        color:rgba(142, 23, 172, 0.329);
+    }
+    @font-face{
+        font-family:letrax;
+        src: url(fuentes_de_texto/letrax.ttf);
+    }
+    h3{
+        font-family:letrax;
+        font-size: 70px;
+        padding:20px;
+        margin:20px;
+        text-shadow: 0px 0px 10px black;
+    }
+    @font-face{
+        font-family:Halloween;
+        src: url(fuentes_de_texto/letrax.ttf);
+    }
+    .boton{
+        font-family:Halloween;
+        font-size: 120px;
+        padding:20px;
+        margin:0px;
+        color: white;
+        text-shadow:
+         10px 10px 20px #FFE000,
+         10px 10px 20px black;
+        text-decoration: underline;
+        letter-spacing: 2px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+ .boton{
+     grid-area: boton;
+ } 
+ @font-face{
+    font-family:letraboton;
+    src: url(fuentes_de_texto/StrongConcrete-Bold.otf);
+}
+.Menu_item a{
+     font-family: letraboton;
+    font-size: 40px;
+     color:red;
+     text-shadow:5px 5px 10px black;
+     font-weight: lighter;
+     text-decoration: none;   
+     text-align:center;
+ } 
+
+@media screen and (max-width:800px) {
+    input{
+        background: black;
+       
+        margin: 50px 50px 50px 50px ;
+        left: 30px;
+        
+    }
+    .boton{
+        flex-direction: column;
+        height: 300px;
+    }
+    h1{
+        
+        flex-flow:row wrap;
+        display: flex;
+        
+    }
+    nav{
+        flex-direction: column;
+        background: blue;
+        margin: 5px;
+        
+    }
+    .contenedor{
+        grid-template-areas:"boton boton boton" 
+                                "header header header" 
+                                " contenido contenido contenido"
+                                " sidebar sidebar sidebar"
+                                "widget-1 widget-1 widget-2"
+                                "footer footer footer";
+        }
+    }
+    .contenedor .footer{
+        flex-direction: column;
+        position:relative;
+        
+    }
+    .contenedor .sidebar{
+        margin-right: auto;
+        margin-left: auto;
+       
+    }
+
+    header{
+        flex-direction: column;
+        
+        
+    }
+    .contenido{
+        flex-direction:column;
+        
+    }
+    h3{
+       flex-direction: column; 
+       
+    }
+    main{
+        flex-direction: column;
+        
+    }
+    
+
+
+
+/*falta terminar pero ni idea
+ postition fixed
+ boton 50 left 
+  etiqueta articulo usar en texto */
