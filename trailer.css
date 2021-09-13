@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body{
+    
+    background-image: url(Images/visual.jpg);
+    background-repeat:unset;
+    background-size:cover;
+    background-position:0% 100%;
+    min-height: 100%;
+    background-attachment: scroll;
+    color:black;
+    font-family:'Times New Roman', Times, serif;
+    cursor:url(Images/p1qktz9669q61.png), auto;
+}
+/*cursor sigue sin funcionar toca ver uno que este verificado*/
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display:grid;
+    grid-gap:13px;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(5,auto);
+
+    grid-template-areas:"boton boton boton" 
+                        "header header header" 
+                        " contenido contenido contenido"
+                        "footer footer footer";
+}
+.contenedor > div
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background: rgb(168, 114, 114);
+    padding: 20px;
+    border-radius: 4px;
+}
+.contenedor .header{
+    background-color: #FFE000;
+    color: white;
+
+    grid-area: header
+}
+.contenedor .contenido{
+    grid-area: contenido;
+    background-color: rgb(231, 195, 75);
+}
+
+.contenedor .footer{
+    background-image:url(gifts/64b8823a15830086485ca64f2dee38561a183978r1-500-281_hq.gif);
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+
+    background-color:#FFE000;
+    color: black;
+    grid-area: footer;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+    
+}
+.Menu
+    {
+        box-sizing:content-box;
+        font-size: 100;
+        color:brown;
+        
+        
+    }
+    .Menu_item
+    {
+        width: 120%;
+        display:inline-block;
+        padding: 30px 30px;
+        background-color: white; 
+        border: 10px solid  rgb(231, 195, 75);
+        text-align:center;
+        color:#fff;
+        font-family:impact;
+        margin: 10px;
+        opacity: 0.9;
+        
+        
+    }
+    .Menu_item:hover
+    {
+        background-color:yellow;
+        color:black !important;
+        border: 5px solid red;
+        font-size: 50px;
+        
+    }
+    .Menu_item--active
+    {
+        font-size: 100px;
+        color: red;
+    }
+    .Menu_item a{
+        font-family: letraboton;
+       font-size: 40px;
+        color:red;
+        text-shadow:5px 5px 10px black;
+        font-weight: lighter;
+        text-decoration: none;   
+        text-align:center;
+        
+    } 
+
+   .Menu_item ul{
+       display: none;
+       top: 150px;
+       width: 30%;
+       position:absolute;
+       left: 450px; 
+       
+   }
+   
+   .Menu_item:hover ul{
+       display: block;
+   
+   }
+   .Menu_item li{
+       position: relative;
+       
+       
+   }
+
+
+
+    @font-face{
+        font-family:RabbitsAndFoxes;
+        src: url(fuentes_de_texto/RabbitsAndFoxes.ttf);
+    }
+    h6{
+        font-family:RabbitsAndFoxes;
+        font-size: 30px;
+        padding:20px;
+        margin:20px;
+        color:rgba(142, 23, 172, 0.329);
+    }
+    @font-face{
+        font-family:letrax;
+        src: url(fuentes_de_texto/letrax.ttf);
+    }
+    h3{
+        font-family:letrax;
+        font-size: 70px;
+        padding:20px;
+        margin:20px;
+        text-shadow: 0px 0px 10px black;
+    }
+    @font-face{
+        font-family:Halloween;
+        src: url(fuentes_de_texto/letrax.ttf);
+    }
+    h1{
+        font-family:Halloween;
+        font-size: 145px;
+        padding: 20px;
+       
+        color: white;
+        text-shadow:
+         10px 10px 20px #FFE000,
+         10px 10px 20px black;
+        text-decoration: underline;
+        letter-spacing: 2px;
+    }
+ h1{
+     grid-area: boton;
+ } 
+ @font-face{
+    font-family:letraboton;
+    src: url(fuentes_de_texto/StrongConcrete-Bold.otf);
+}
+h2{
+    font-size: 80px;
+    font-family: letraboton;
+    color: white;
+    
+    text-shadow:
+         10px 10px 20px #FFE000,
+         10px 10px 20px black;
+        text-decoration: underline;
+        letter-spacing: 2px;
+        
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.1);
+        border-color: blue;
+        box-shadow:0px 0px 25px blue;
+}
+.contenido{
+    text-align:center;
+}
+/*aqui empieza*/
+
+
+
+
+/*Parce aca la vaina es que no conecta el menu o no se :v
+opacity: 0.4;
+opacity: 0.7;*/
+
+.contenido article{
+    margin-bottom: 0 ;
+    padding-bottom:10px;
+    border-bottom:1px solid black
+}
+@media screen and (max-width:800px) {
+    .contenedor{
+        flex-direction: column;
+        grid-template-areas: "boton boton boton"
+        "header header header" 
+        " contenido contenido contenido"
+        "footer footer footer";
+    }
+    .header{
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .sidebar{
+        flex-direction:column;
+        height: 700px;
+    }
+    
+    .Menu_item{
+        background: black;
+        right:140px;
+        
+        flex-direction: column;
+
+    }
+    aside{
+        flex-direction: row;
+        flex:0
+    }
+    aside .widget{
+        flex-grow: 1 ;
+    }
+
+    .widget-1, .widget-2{
+        flex-direction: column;
+        height: 200px;
+        
+
+    }
+    .video{
+        width:90%;
+    }
+    
+    
+    
+    
+}
