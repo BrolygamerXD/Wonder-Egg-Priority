@@ -1,0 +1,228 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 40px 40px;
+    background-image: url(Images/visual.jpg);
+    background-repeat:unset;
+    background-size:cover;
+    background-position:0% 100%;
+    min-height: 100%;
+    background-attachment: scroll;
+    color:black;
+    font-family:'Times New Roman', Times, serif;
+    cursor:url(Images/p1qktz9669q61.png), auto;
+}
+/*cursor sigue sin funcionar toca ver uno que este verificado*/
+
+.contenedor > div
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background: rgb(168, 114, 114);
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px;
+}
+.contenedor .header{
+    background-color: #FFE000;
+    color: white;
+
+    grid-area: header
+}
+.contenedor .contenido{
+    grid-area: contenido;
+    background-color: rgb(231, 195, 75);
+}
+.contenedor .sidebar{
+    background-image:url(Images/scrover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    width: 350px;
+
+    
+    grid-area: sidebar;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    background-color: rgba(00,00,255,05);
+}
+.contenedor.sidebar::before{
+    opacity: 0.5;
+}
+.contenedor .widget-1,
+.contenedor .widget-2
+{
+    background:rgb(106, 106, 216);
+    color: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+.contenedor .widget-1{
+    grid-area: widget-1;
+    background-image: url(Images/fhjf.jpg);
+}
+.contenedor .widget-2{
+    grid-area: widget-2;
+    background-image: url(Images/hhjhg.jpg);
+}
+.contenedor .footer{
+    background-image:url(gifts/64b8823a15830086485ca64f2dee38561a183978r1-500-281_hq.gif);
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size:contain;
+    
+
+
+    background-color:#FFE000;
+    color: black;
+    grid-area: footer;
+}
+    @font-face{
+        font-family:Carlotte;
+        src: url(fuentes_de_texto/StrongConcrete-Bold.otf);
+    }
+    input{
+        font-family:Carlotte;
+        border: none;
+        font-size: 32px;
+        padding:20px;
+        margin: 20px;
+        position:absolute;
+        right: 100px;
+        color: white;
+        border-radius: 10px;
+        box-shadow:5px 5px 10px blue;
+        background-color: cornflowerblue;
+
+    }
+    input:hover{
+        color: black;
+        background-color:#FFE000;
+    }
+
+    @font-face{
+        font-family:RabbitsAndFoxes;
+        src: url(fuentes_de_texto/RabbitsAndFoxes.ttf);
+    }
+    h2{
+        font-family:RabbitsAndFoxes;
+        font-size: 30px;
+        padding:20px;
+        margin:20px;
+        color:rgba(142, 23, 172, 0.329);
+    }
+    @font-face{
+        font-family:letrax;
+        src: url(fuentes_de_texto/letrax.ttf);
+    }
+    h3{
+        font-family:letrax;
+        font-size: 70px;
+        padding:20px;
+        margin:20px;
+        text-shadow: 0px 0px 10px black;
+    }
+    @font-face{
+        font-family:Halloween;
+        src: url(fuentes_de_texto/letrax.ttf);
+    }
+    .boton{
+        
+        font-family:Halloween;
+        font-size: 120px;
+        padding:20px;
+        margin:0px;
+        color: white;
+        text-shadow:
+         10px 10px 20px #FFE000,
+         10px 10px 20px black;
+        text-decoration: underline;
+        letter-spacing: 2px;
+    }
+ .boton{
+     grid-area: boton;
+ }  
+ .contenedor-imagenes{
+    display:flex;
+    width:85%;
+    margin:auto;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    
+}
+.contenedor-imagenes .imagenes{
+    width: 32%;
+    position: relative;
+    height: 250px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px black;
+    
+}
+.imagen img{
+    width: 40%;
+    margin-bottom: 15px;
+}
+}
+@media screen and (max-width:800px) {
+    .contenedor{
+        flex-direction: column;
+        grid-template-areas: "contenedor contenedor contenedor"
+                                "boton boton boton" 
+                                "header header header" 
+                                "contenido contenido contenido"
+                                "sidebar sidebar sidebar"
+                                "widget-1 widget-1 widget-1"
+                                "widget-2 widget-2 widget-2"
+                                "footer footer footer";
+    }
+    .header{
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .sidebar{
+        flex-direction:column;
+        height: 700px;
+    }
+    
+    .Menu_item{
+        background: black;
+        right:140px;
+        
+        flex-direction: column;
+
+    }
+    aside{
+        flex-direction: row;
+        flex:0
+    }
+    aside .widget{
+        flex-grow: 1 ;
+    }
+
+    .widget-1, .widget-2{
+        flex-direction: column;
+        height: 200px;
+        
+
+    }
+    .boton{
+        flex-direction: column;
+        height: 300px;
+    }
+    

@@ -1,0 +1,36 @@
+.box-1
+{
+    background:yellowgreen;
+    border:10px solid red;
+}
+.box-2
+{
+    background: lightcoral;
+}
+.box-3
+{
+    background:lightcoral;
+    border:10px dashed blue;
+}
+.box-4
+{
+    background:green;
+    border:10px dotted red;
+}
+.box-5
+{
+    background:blue;
+    border:10px groove yellow;
+}
+.box-6
+{
+    background:violet;
+    border:15px rgb(7, 97, 139);
+    border-style:double;
+}
+[class*=box]
+{
+    width: 200px;
+    height: 200px;
+    margin:2cm;
+}

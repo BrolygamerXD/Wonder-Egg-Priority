@@ -1,0 +1,247 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+        .table{
+            right:50%;
+        }
+    .Menu
+    {
+        box-sizing:border-box;
+        font-size: 100;
+        color:brown
+        
+    }
+    .Menu_item
+    {
+        display:inline-block;
+        width: 150px;
+        padding: 30px 30px;
+        background-color: chocolate;
+        border: 10px solid red;
+        text-align:center;
+        color:#fff;
+        font-family:impact;
+    }
+    .Menu_item:hover
+    {
+        background-color:yellow;
+        color:black !important;
+        border: 5px solid red;
+        font-size: 50px;
+    }
+    .Menu_item--active
+    {
+        font-size: 150px;
+        color: red;
+    }
+    body{
+        background-image: url(Images/visual.jpg);
+        background-repeat:unset;
+        background-size:cover;
+        background-position:0% 100%;
+        
+        min-height: 100%;
+        background-attachment: scroll;
+        color:black;
+        font-family:'Times New Roman', Times, serif;
+    }
+    .contenedor{
+        width: 90%;
+        max-width: 1000px;
+        margin: 20px auto;
+        display:grid;
+        grid-gap:13px;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: repeat(5,auto);
+    
+        grid-template-areas:"boton boton boton" 
+                            "header header header" 
+                            " sidebar contenido contenido"
+                            " sidebar widget-1 widget-2"
+                            "footer footer footer";
+    }
+    .contenedor > div
+    .contenedor .header,
+    .contenedor .contenido,
+    .contenedor .sidebar,
+    .contenedor .footer{
+        background: rgb(168, 114, 114);
+        padding: 20px;
+        border-radius: 4px;
+    }
+    .contenedor .header{
+        background-color: #FFE000;
+        color: white;
+        grid-area: header
+    }
+    .contenedor .contenido{
+        grid-area: contenido;
+        background-color: rgb(231, 195, 75);
+    }
+    .contenedor .sidebar{
+        background-image:url(Images/scrover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:bottom;
+    
+        
+        grid-area: sidebar;
+        text-align: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        background-color: rgba(00,00,255,05);
+    }
+    .contenedor.sidebar::before{
+        opacity: 0.5;
+    }
+    .contenedor .widget-1,
+    .contenedor .widget-2
+    {
+        background:rgb(106, 106, 216);
+        color: white;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        
+        background-size: cover;
+    }
+    .contenedor .widget-1{
+        grid-area: widget-1;
+        background-image: url(Images/fhjf.jpg);
+    }
+    .contenedor .widget-2{
+        grid-area: widget-2;
+        background-image: url(Images/hhjhg.jpg);
+    }
+    .contenedor .footer{
+        background-image:url(gifts/64b8823a15830086485ca64f2dee38561a183978r1-500-281_hq.gif);
+        background-position:right;
+        background-repeat: no-repeat;
+        background-size:contain;
+    
+    
+        background-color:#FFE000;
+        color: black;
+        grid-area: footer;
+    }
+    .Menu
+        {
+            box-sizing:content-box;
+            font-size: 100;
+            color:brown;
+            
+        }
+        .Menu_item
+        {
+            display:inline-block;
+            width: 150px;
+            padding: 30px 70px;
+            background-color: white; 
+            border: 10px solid  rgb(231, 195, 75);
+            text-align:center;
+            color:#fff;
+            font-family:impact;
+            opacity: 0.7;
+            cursor: not-allowed;   
+            
+        }
+        .Menu_item:hover
+        {
+            background-color:yellow;
+            color:black !important;
+            border: 5px solid red;
+            font-size: 50px;
+        }
+        .Menu_item--active
+        {
+            font-size: 100px;
+            color: red;
+        }
+        @font-face{
+            font-family:Carlotte;
+            src: url(fuentes\ de\ texto/StrongConcrete-Bold.otf);
+        }
+        input{
+            font-family:Carlotte;
+            font-size: 30px;
+            padding:20px;
+            margin: 20px;
+            position:absolute;
+            right: 100px;
+            color: white;
+            border-radius: 10px;
+            box-shadow:5px 5px 10px blue;
+            background-color: cornflowerblue;
+    
+        }
+        input:hover{
+            color: black;
+            background-color:#FFE000;
+        }
+        @font-face{
+            font-family:RabbitsAndFoxes;
+            src: url(fuentes\ de\ texto/RabbitsAndFoxes.ttf);
+        }
+        h2{
+            font-family:RabbitsAndFoxes;
+            font-size: 30px;
+            padding:20px;
+            margin:20px;
+            color:rgba(142, 23, 172, 0.329);
+        }
+        @font-face{
+            font-family:letrax;
+            src: url(fuentes\ de\ texto/letrax.ttf);
+        }
+        h3{
+            font-family:letrax;
+            font-size: 70px;
+            padding:20px;
+            margin:20px;
+            text-shadow: 0px 0px 10px black;
+        }
+        @font-face{
+            font-family:Halloween;
+            src: url(fuentes\ de\ texto/letrax.ttf);
+        }
+        .boton{
+            font-family:Halloween;
+            font-size: 100px;
+            padding:20px;
+            margin:0px;
+            color:rgb(150, 69, 226);
+            text-shadow: 10px 10px 20px white;
+        }
+     .boton{
+         grid-area: boton;
+     } 
+     @font-face{
+        font-family:letraboton;
+        src: url(fuentes\ de\ texto/StrongConcrete-Bold.otf);
+    }
+    .Menu_item a{
+         font-family: letraboton;
+        font-size: 25px;
+         color:red;
+         text-shadow:5px 5px 10px black;
+         font-weight: lighter;
+         text-decoration: none;
+     }  
+    @media screen and (max-width:800px){
+        .contenedor{
+            flex-direction:column;
+        }
+        header{
+            flex-direction:column;
+            padding: 0;
+        }
+        .contenido{
+            flex-direction: row;
+            margin:auto;
+        }
+    }
